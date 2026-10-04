@@ -1,0 +1,133 @@
+/* Overlay Lab starter: the layout is done. Write your code under each YOUR CODE comment. */
+
+/* Colors and spacing are set for you. You do not need to change them. */
+:root {
+  --primary-color: #1D4E89;
+  --secondary-color: #1A787C;
+  --contrast-color: #E8B873;
+  --triadic-color: #A62A61;
+  --extra-color: #F5F2EA;
+
+  --radius: 1rem;
+  --space-small: 0.5rem;
+  --space: 1rem;
+  --space-big: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--primary-color);
+  background: var(--extra-color);
+}
+
+.site-header,
+.site-footer {
+  padding: var(--space) var(--space);
+  text-align: center;
+  color: var(--extra-color);
+  background: var(--primary-color);
+}
+
+.page {
+  display: grid;
+  gap: var(--space-big);
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: var(--space-big) var(--space);
+}
+
+.lab {
+  padding: var(--space);
+  border-radius: var(--radius);
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Photo cards ---------- */
+.photo-card {
+  display: block;
+  max-width: 40rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.overlay {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* YOUR CODE: Lab 1, the overlay recipe */
+
+
+
+
+/* ---------- Lab 2: Four Ways In ---------- */
+.photo-grid {
+  display: grid;
+  gap: var(--space);
+}
+
+/* YOUR CODE: Lab 2, four entrances */
+
+
+
+
+/* ---------- Lab 3: Click Moves ---------- */
+.click-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-big);
+}
+
+.push-button,
+.slide-button {
+  padding: var(--space) var(--space-big);
+  border: none;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  background: var(--contrast-color);
+  cursor: pointer;
+}
+
+.squish-card {
+  width: 9rem;
+  height: 9rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--extra-color);
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* YOUR CODE: Lab 3, click moves (:active) */
+
+
+
+/* ---------- PC: 1024px and up ---------- */
+@media (min-width: 1024px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* YOUR CODE: PC only, hide the overlays until hover */
+
+}
