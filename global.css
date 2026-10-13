@@ -72,7 +72,18 @@ body {
 
 /* YOUR CODE: Lab 1, the overlay recipe */
 
-
+.photo-card{
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color: #FFFFFF;
+  background-color: rgba(28, 78, 137, 0.5);
+}
 
 
 /* ---------- Lab 2: Four Ways In ---------- */
@@ -82,6 +93,39 @@ body {
 }
 
 /* YOUR CODE: Lab 2, four entrances */
+.photo-card{
+  overflow:hidden
+}
+.overlay {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+}
+.photo-card:hover .overlay,
+.photo-card:focus-visible .overlay {
+  opacity: 1;
+}
+.overlay-slide .overlay{
+  transform: translateY(100%);
+  background-color: rgba(26, 120, 124, 0.5);
+}
+.overlay-slide:hover .overlay{
+  transform: translateY(0);
+}
+.overlay-zoom .photo{
+  transition: scale 0.6s ease, transform 0.6s ease
+}
+.overlay-zoom:hover .photo, .overlay-zoom:focus-visible .photo{
+  transform: scale(1.15);
+}
+.overlay-zoom .overlay{
+  background-color: rgba(166, 42, 97, 0.5)
+}
+.overlay-gradient .overlay{
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0)60%)
+}
+.overlay-gradient:hover .overlay, .ovrelay-gradient:focus-visible .overlay{
+  opacity: 1;
+}
 
 
 
